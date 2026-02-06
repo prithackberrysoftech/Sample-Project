@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pdb
+
+# Django migrations (optional - keep if committing)
+# */migrations/
+# Uncomment the line above if you don’t want to track initial migrations
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# SQLite database
+db.sqlite3
+
+# Logs
+*.log
+
+media
+# # Media & uploaded files
+media/chapter_docx
+media/flipbook_pages
+media/generated_pdfs
+media/section_pdfs
+
+# # Static files collected
+
+
+# Local settings
+/local_settings.py
+/settings_local.py
+
+# Environment variables
+.env
+*.env
+uv.lock
+
+# Node (if using npm in project)
+node_modules/
+
+# Backup files
+*.bak
+*.swp
+*.swo
+
+# MacOS system files
+.DS_Store
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Profiling data
+prof*
+
+# MyPy cache
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# Security
+secret.key
+
+# Settings.py
+kaizen/settings.py
+
+core/static/core/img/video-one.mp4   
+
+
+*.mp4

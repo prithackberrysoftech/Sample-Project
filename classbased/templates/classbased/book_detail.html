@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ object.title }}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .book-info {
+            margin-bottom: 30px;
+        }
+        .book-info p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 15px 0;
+            color: #34495e;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .book-info strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .actions a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .edit-btn {
+            background-color: #f39c12;
+            color: white;
+            border: 1px solid #f39c12;
+        }
+        .edit-btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+        .delete-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: 1px solid #e74c3c;
+        }
+        .delete-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        .back-btn {
+            background-color: #95a5a6;
+            color: white;
+            border: 1px solid #95a5a6;
+        }
+        .back-btn:hover {
+            background-color: #7f8c8d;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{ object.title }}</h2>
+
+        <div class="book-info">
+            <p><strong>Author:</strong> {{ object.author }}</p>
+            <p><strong>Price:</strong> ₹{{ object.price }}</p>
+        </div>
+
+        <div class="actions">
+            <a href="{% url 'book_update' object.pk %}" class="edit-btn">Edit</a>
+            <a href="{% url 'book_delete' object.pk %}" class="delete-btn">Delete</a>
+            <a href="{% url 'book_list' %}" class="back-btn">Back</a>
+        </div>
+    </div>
+</body>
+</html>

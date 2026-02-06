@@ -1,0 +1,52 @@
+
+.env ma change krvo 
+setting ma change karvo 
+
+
+
+
+
+/education-training/fellowship/ 
+/education-training/observers/
+/coming_soon/   ==== kiazon con 
+/education-training/cme/
+
+/books-publications/editorial_academic/
+
+
+toc delete 11 to 13 section
+FIRST PAGE FUNDAMENTAL VADU EDIT KRVU and last uveidtied surgery
+
+
+whay and what Hargis video upload karva 
+
+
+
+
+
+========================================== django Learnig 
+
+---------------------
+testing from in profile (class based)  =====>> Done
+from implementation class based genric and function based  ==>> DONE 
+message =====>> Done 
+-------------------
+
+
+Testing =====>> Done
+FORM ==>> DONE 
+
+
+
+
+api 
+jwt 
+HOW TO PASS IN HEADER ETC 
+RETURN SAME RESPONSE MODEL 
+SOFT DELETE WITH BASE CLASS 
+UNFOLD ADMIN / ANY OTHER CONFIGURATION 
+CREATE CUSTOM SIGNAL 
+swagger UI Configure 
+oauth 
+firebase 
+

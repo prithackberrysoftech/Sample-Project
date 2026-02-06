@@ -1,0 +1,67 @@
+
+
+🧱 STEP 1: Basic logging concepts
+
+1️⃣ Log Levels (MOST IMPORTANT)
+
+	| Level      | Use kab kare                      |
+	| ---------- | --------------------------------- |
+	| `DEBUG`    | Development debugging             |
+	| `INFO`     | Normal app flow                   |
+	| `WARNING`  | Kuch unexpected but app chal rahi |
+	| `ERROR`    | Serious problem                   |
+	| `CRITICAL` | App crash level                   |
+
+
+
+🧱STEP 2: Basic Django logger configuration
+
+
+LOGS_DIR = BASE_DIR / "logs"
+LOGS_DIR.mkdir(exist_ok=True)
+ 
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "[{asctime}] {levelname} {name} {message}",
+            "style": "{",
+        },
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "simple",
+        },
+        "file": {
+            "level": "ERROR",
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": LOGS_DIR / "errors.log",
+            "maxBytes": 1024 * 1024 * 5,  # 5 MB
+            "backupCount": 5,
+            "formatter": "verbose",
+        },
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["console", "file"],
+            "level": "ERROR",
+            "propagate": True,
+        },
+        "django.request": {
+            "handlers": ["console", "file"],
+            "level": "ERROR",
+            "propagate": False,
+        },
+        "core": {
+            "handlers": ["console", "file"],
+            "level": "ERROR",
+            "propagate": False,
+        },
+    },
+}
