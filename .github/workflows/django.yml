@@ -31,12 +31,12 @@ jobs:
 
       - name: Install dependencies using uv
         run: |
-          uv pip install -r requirements.txt
+          uv sync
 
       - name: Run Django migrations
         run: |
-          uv run python manage.py migrate --noinput
+          uv run manage.py migrate --noinput
 
       - name: Run Django tests
         run: |
-          uv run python manage.py test
+          uv run manage.py test
