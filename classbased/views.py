@@ -4,6 +4,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from classbased.forms import ProfileForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView
 
 class ProfileView(LoginRequiredMixin,View):
     login_url = "/admin/login/"   # or your custom login URL
@@ -41,3 +42,8 @@ class ProfileView(LoginRequiredMixin,View):
             "profile_form": profile_form,
             "password_form": password_form
         })
+
+
+
+class HomeView(TemplateView):
+    template_name = "classbased/index.html"

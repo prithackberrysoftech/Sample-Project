@@ -8,4 +8,3 @@ class ClassbasedConfig(AppConfig):
         import classbased.signals
 
 
-        

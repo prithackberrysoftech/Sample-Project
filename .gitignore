@@ -42,13 +42,13 @@ media/section_pdfs
 /local_settings.py
 /settings_local.py
 
+
+
 # Environment variables
 .env
 *.env
 uv.lock
 
-# Node (if using npm in project)
-node_modules/
 
 # Backup files
 *.bak
@@ -75,10 +75,6 @@ prof*
 # Security
 secret.key
 
-# Settings.py
-kaizen/settings.py
-
-core/static/core/img/video-one.mp4   
 
 
 *.mp4
